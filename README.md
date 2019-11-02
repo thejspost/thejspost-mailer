@@ -1,2 +1,3 @@
 # thejspost-mailer
-Nodemailer and SES script to send out the newsletter
+
+The JS Post Mailer is a CLI that uses Nodemailer and AWS SES to send out the newsletter emails to the subscribers.

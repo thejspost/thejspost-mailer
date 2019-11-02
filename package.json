@@ -1,0 +1,24 @@
+{
+  "name": "thejspost-mailer",
+  "version": "1.0.0",
+  "description": "SES and Nodemailer script to send out bulk emails for The JS Post",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Mailer",
+    "Nodemailer",
+    "SES"
+  ],
+  "author": "Ekam Walia, Pranav Tharoor",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.562.0",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^8.2.0",
+    "nodemailer": "^6.3.1",
+    "nodemailer-plugin-inline-base64": "^2.1.1"
+  }
+}
