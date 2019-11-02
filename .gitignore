@@ -2,3 +2,4 @@
 node_modules/
 awsconfig.json
 *.csv
+articles.js

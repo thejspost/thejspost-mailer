@@ -2,26 +2,37 @@ const articles = require("./articles.js");
 
 const createMail = name => {
   const html = `
-    <p style="font-family:sans-serif">
-      Hey ${name}!
-      Here are your JS articles from the past two weeks.  
+    <p style="font-family:sans-serif; font-size:14px;">
+      Hey ${name}!<br />
+      Here are your JavaScript articles from the past two weeks.  
       
-      <ul>
-      ${articles.map(article => {
-        return `<li>
-          <p>${article.title}</p>
+      <ul style="padding: 0; list-style:none; font-size:14px;">
+      ${articles
+        .map((article, index) => {
+          return `<li>
+          <b style="font-size:16px;">
+            <span>${index + 1}. </span>
+            ${article.title}
+          </b>
           <p>${article.description}</p>
-          <p>This article was posted by ${article.author} on ${article.forum}</p>
+          <p>Read the article here - ${article.link}</p>
+          <p>
+            Posted by ${article.author} 
+            on ${article.forum}
+          </p>
         </li>`;
-      })}
+        })
+        .join(" ")}
       </ul>
 
-      That's all for The JS Post #${process.env.POST_NUMBER}!
-      We will be back with more interesting articles in two weeks.
+      <br />
+      That's all for The JS Post #${process.env.POST_NUMBER}. We will be back 
+      with more interesting articles in two weeks. Stay tuned!<br /><br />
 
-      Regards,
-      The JS Post Team
+      Regards,<br />
+      The JS Post Team<br /><br />
 
+      PS - Like our initiative? Help us spread the word about The JS Post with other JS developers!
     </p>
   `;
 
